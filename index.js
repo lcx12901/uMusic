@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 const match = require('@revincx/unblockneteasemusic');
-
+const PROT = process.env_PROT || 8080
 app.all('*',function (req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
@@ -27,13 +27,11 @@ app.get('/getSong', function(res, rep) {
 		* @param {Array<String>||undefined} source support qq, xiami, baidu, kugou, kuwo, migu, joox
 		* @return {Promise<Object>}
 		*/
-		match(parseInt(res.query.songid), ['bilibili','qq', 'kuwo', 'kugou']).then(function (value) {
-			rep.send(value);
+		match(parseInt(res.query.songid), ['bilibili','qq', 'kuwo', 'kugou']).then( res => {
+			rep.send(res)
 		})
 	} else {
 		rep.send({'status': 'null'})
 	}
-    
 });
-
-app.listen(3000);
+app.listen(PROT);
