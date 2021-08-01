@@ -1,18 +1,28 @@
 {
   "name": "umusic",
   "version": "1.0.0",
-  "description": "",
+  "description": "根据歌曲播放Url地址\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b\u001b[\u001b[2~\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Curl地址",
   "main": "index.js",
+  "dependencies": {
+    "@revincx/unblockneteasemusic": "^0.25.8",
+    "express": "^4.17.1",
+    "forever": "^3.0.4",
+    "http": "^0.0.1-security",
+    "long": "^4.0.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcx12901/uMusic.git"
+  },
+  "author": "lcx12901",
   "license": "ISC",
-  "dependencies": {
-    "@nondanee/unblockneteasemusic": "^0.25.3",
-    "express": "^4.17.1",
-    "http": "0.0.1-security",
-    "long": "^4.0.0",
-    "url": "^0.11.0"
-  }
+  "bugs": {
+    "url": "https://github.com/lcx12901/uMusic/issues"
+  },
+  "homepage": "https://github.com/lcx12901/uMusic#readme"
 }

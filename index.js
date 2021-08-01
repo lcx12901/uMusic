@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-const match = require('@nondanee/unblockneteasemusic');
+const match = require('@revincx/unblockneteasemusic');
 
 app.all('*',function (req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');
@@ -27,7 +27,7 @@ app.get('/getSong', function(res, rep) {
 		* @param {Array<String>||undefined} source support qq, xiami, baidu, kugou, kuwo, migu, joox
 		* @return {Promise<Object>}
 		*/
-		match(parseInt(res.query.songid), ['qq', 'migu', 'joox', 'xiaomi', 'baidu', 'kuwo', 'kugou']).then(function (value) {
+		match(parseInt(res.query.songid), ['bilibili','qq', 'kuwo', 'kugou']).then(function (value) {
 			rep.send(value);
 		})
 	} else {
